@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 11 202 202">
+  <style>
+    .contorno{ stroke:#2C5D1D; }
+    @media (prefers-color-scheme: dark){ .contorno{ stroke:#FFFFFF; } }
+  </style>
+  <defs>
+    <clipPath id="recorte">
+      <path d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#recorte)">
+    <rect x="0" y="10" width="100" height="190" fill="#92B731"/>
+    <rect x="100" y="60" width="80" height="13" fill="#92B731"/>
+    <rect x="100" y="82" width="80" height="13" fill="#92B731"/>
+    <rect x="100" y="104" width="80" height="13" fill="#E0A42B"/>
+    <rect x="100" y="126" width="80" height="13" fill="#92B731"/>
+    <rect x="100" y="148" width="80" height="13" fill="#92B731"/>
+  </g>
+  <path class="contorno" d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z" fill="none" stroke-width="14" stroke-linejoin="round"/>
+  <line class="contorno" x1="100" y1="22" x2="100" y2="206" stroke-width="14" stroke-linecap="round"/>
+</svg>

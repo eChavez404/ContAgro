@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ContAgro | Cada nota de insumo na fazenda certa</title>
+<meta name="description" content="Quando a nota de insumo chega no escritório, o ContAgro pergunta no WhatsApp do produtor para qual fazenda foi a carga. Ele responde com um toque e o lançamento já entra com o imóvel certo.">
+<meta name="theme-color" content="#2C5D1D">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ContAgro | Cada nota de insumo na fazenda certa">
+<meta property="og:description" content="O produtor responde no WhatsApp para qual fazenda foi a carga e o escritório recebe o lançamento já com o imóvel certo.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="container cabecalho__interno">
+
+    <a class="marca" href="#inicio" aria-label="ContAgro, início">
+      <svg class="marca__folha" viewBox="0 0 200 216" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="recorteFolha">
+            <path d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#recorteFolha)">
+          <rect x="0" y="10" width="100" height="190" fill="#92B731"/>
+          <rect x="100" y="60" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="82" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="104" width="80" height="13" fill="#E0A42B"/>
+          <rect x="100" y="126" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="148" width="80" height="13" fill="#92B731"/>
+        </g>
+        <path d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z" fill="none" stroke="#2C5D1D" stroke-width="8" stroke-linejoin="round"/>
+        <line x1="100" y1="22" x2="100" y2="206" stroke="#2C5D1D" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <span class="marca__nome"><span>Cont</span><span>Agro</span></span>
+    </a>
+
+    <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#problema">O problema</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#calendario">Calendário</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+      <a class="botao botao--primario menu__cta" href="#contato">Falar com a gente</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="hero" id="inicio">
+  <div class="container hero__grade">
+
+    <div class="hero__texto">
+      <h1>A gente pergunta de qual fazenda é a nota enquanto o produtor <em>ainda lembra</em>.</h1>
+      <p class="hero__sub">
+        A nota de insumo chega no escritório sem dizer para qual fazenda a carga foi.
+        Quando isso fica para depois, alguém passa abril tentando adivinhar. O ContAgro
+        manda a pergunta no WhatsApp do produtor assim que a nota sai, ele toca no nome
+        da fazenda e o lançamento já entra no lugar certo.
+      </p>
+      <div class="hero__acoes">
+        <a class="botao botao--primario" href="#contato">Quero testar no meu escritório <span class="seta" aria-hidden="true">→</span></a>
+        <a class="botao botao--fantasma" href="#como">Ver como funciona</a>
+      </div>
+      <p class="hero__nota">
+        Funciona pelo WhatsApp que o produtor já usa. Não precisa instalar nada e a gente
+        não pede certificado digital.
+      </p>
+    </div>
+
+    <div class="hero__visual" id="conversa" aria-hidden="true">
+      <div class="conversa">
+        <div class="conversa__topo">
+          <span class="conversa__avatar">CA</span>
+          <span class="conversa__titulo">ContAgro</span>
+          <span class="conversa__status" id="conversaStatus">online</span>
+        </div>
+
+        <div class="conversa__corpo">
+          <div class="digitando" id="digitando"><span></span><span></span><span></span></div>
+
+          <div class="balao" data-etapa="nota">
+            <p class="balao__rotulo">Nota nova</p>
+            <p class="balao__linha"><strong>Fertipar Fertilizantes</strong></p>
+            <p class="balao__linha">Adubo · R$ 86.400,00</p>
+            <p class="balao__linha balao__linha--fraca">Hoje, 09:12 · NF-e 42.118</p>
+            <p class="balao__pergunta">Essa carga foi para qual fazenda?</p>
+            <div class="balao__opcoes">
+              <span class="balao__escolha">Boa Vista</span>
+              <span>Santa Luzia</span>
+              <span>Dividir</span>
+            </div>
+          </div>
+
+          <div class="balao balao--saida" data-etapa="resposta">
+            Boa Vista <span class="vistos">✓✓</span>
+          </div>
+
+          <div class="balao balao--ok" data-etapa="ok">
+            Anotado, obrigado! Ficou na <strong>Boa Vista</strong>, safra 25/26.
+          </div>
+        </div>
+      </div>
+
+      <div class="lancamento" data-etapa="lancamento">
+        <p class="lancamento__rotulo">No escritório</p>
+        <p><strong>NF-e 42.118</strong> · R$ 86.400,00</p>
+        <p>Fazenda Boa Vista · Safra 25/26</p>
+        <p class="lancamento__ok">Pronto para o LCDPR</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="secao" id="problema">
+  <div class="container problema">
+    <div>
+      <h2 class="secao__titulo">Com a nota eletrônica, a informação da fazenda ficou pelo caminho</h2>
+
+      <div class="texto">
+        <p>
+          No tempo da nota de papel, ela vinha junto com a carga. Quem recebia o caminhão
+          na fazenda anotava atrás alguma coisa como <em>“Boa Vista, talhão 3”</em>. Não era
+          bonito, mas quando o papel chegava no escritório o contador sabia onde lançar.
+        </p>
+        <p>
+          Hoje o XML chega no escritório poucas horas depois da emissão, sem passar pela mão
+          de ninguém que viu a carga. É bem mais prático, só que aquela anotação deixou de
+          existir.
+        </p>
+        <p>
+          Aí chega abril e o contador tem centenas de notas sem saber de qual fazenda é cada
+          uma. O que não dá para atribuir fica fora do livro caixa, e o produtor acaba pagando
+          imposto sobre um lucro que ele não teve.
+        </p>
+      </div>
+
+      <p class="nota-legal">
+        O layout do LCDPR pede o código do imóvel em cada lançamento, mas o XML da NF-e não
+        tem esse campo. A Nota Técnica 2024.003, que criou o grupo de informações do agro,
+        também não trouxe. Como ninguém digitou esse dado em lugar nenhum, não tem ferramenta
+        de captura que consiga puxar.
+      </p>
+    </div>
+
+    <div class="comparacao cena" aria-hidden="true">
+      <div class="papel">
+        <span class="comparacao__rotulo">Antes</span>
+        <p class="papel__cabecalho">Nota fiscal · Série 1 · Nº 42.118</p>
+        <p>Fertipar Fertilizantes</p>
+        <p>Adubo NPK 04-14-08</p>
+        <p>Valor total: R$ 86.400,00</p>
+        <p class="papel__anotacao">Boa Vista, talhão 3</p>
+      </div>
+      <div class="xml">
+        <span class="comparacao__rotulo">Hoje</span>
+<pre><code><span class="xml__linha" style="--n:0">&lt;emit&gt;</span><span class="xml__linha" style="--n:1">  &lt;xNome&gt;Fertipar Fertilizantes&lt;/xNome&gt;</span><span class="xml__linha" style="--n:2">&lt;/emit&gt;</span><span class="xml__linha" style="--n:3">&lt;prod&gt;</span><span class="xml__linha" style="--n:4">  &lt;xProd&gt;Adubo NPK 04-14-08&lt;/xProd&gt;</span><span class="xml__linha" style="--n:5">  &lt;vProd&gt;86400.00&lt;/vProd&gt;</span><span class="xml__linha" style="--n:6">&lt;/prod&gt;</span><span class="xml__linha xml__falta" style="--n:7">&lt;!-- fazenda? talhão? --&gt;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--escura" id="como">
+  <div class="container">
+    <h2 class="secao__titulo">Como funciona</h2>
+    <p class="secao__sub">
+      O produtor só entra no segundo passo, e leva uns dez segundos para responder.
+      O resto acontece sozinho.
+    </p>
+
+    <ol class="passos" id="passos">
+      <li class="passo">
+        <span class="passo__num">1</span>
+        <h3>A nota chega no escritório</h3>
+        <p>
+          O escritório já recebe esses XMLs todo dia. O ContAgro lê o que já está entrando
+          (fornecedor, valor, data e chave de acesso), sem precisar do certificado digital
+          do cliente.
+        </p>
+      </li>
+      <li class="passo">
+        <span class="passo__num">2</span>
+        <h3>O produtor recebe uma pergunta no WhatsApp</h3>
+        <p>
+          É uma mensagem curta, com o fornecedor, o valor e um botão para cada fazenda dele.
+          Como a nota é emitida antes de o caminhão sair, a pergunta costuma chegar com a
+          carga ainda na estrada, quando ele sabe direitinho para onde ela vai.
+        </p>
+      </li>
+      <li class="passo">
+        <span class="passo__num">3</span>
+        <h3>O lançamento já entra com a fazenda</h3>
+        <p>
+          A resposta fica ligada à chave da nota. Quando o contador abre o sistema, o
+          lançamento já está com imóvel e safra. O que ainda falta responder aparece numa
+          lista, e dá para ir cobrando o produtor ao longo do ano.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="secao" id="para-quem">
+  <div class="container">
+    <h2 class="secao__titulo">Para quem é</h2>
+
+    <div class="publicos">
+      <article class="publico revelar">
+        <h3>Para o produtor rural</h3>
+        <ul class="lista-check">
+          <li>Não precisa instalar nada. A conversa é no WhatsApp que ele já usa.</li>
+          <li>As fazendas aparecem como botões. Ele toca em uma e pronto.</li>
+          <li>Se o sinal estiver ruim, a mensagem espera no celular e a resposta vai quando a conexão voltar.</li>
+          <li>A mensagem traz fornecedor, produto e valor, então fica fácil reconhecer a carga.</li>
+          <li>Ele também recebe lembretes de prazo (ITR, opção do Funrural, compra de máquina no fim do ano) com tempo de decidir.</li>
+        </ul>
+      </article>
+
+      <article class="publico publico--escuro revelar">
+        <h3>Para o escritório de contabilidade</h3>
+        <ul class="lista-check">
+          <li>Usa os mesmos XMLs que o escritório já recebe hoje.</li>
+          <li>Ninguém precisa guardar certificado digital de cliente, o que tira um risco e um bocado de papelada.</li>
+          <li>O que falta atribuir aparece numa lista no mesmo dia, e dá para cobrar o produtor na hora.</li>
+          <li>Cada nota vai para a fazenda que recebeu a carga, sem rateio por percentual. Fica registrado quem respondeu e quando.</li>
+          <li>O lançamento já sai com o código do imóvel, que é o que o LCDPR pede.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--clara" id="simulador">
+  <div class="container">
+    <h2 class="secao__titulo">Quanto imposto a mais você paga sem comprovar as despesas</h2>
+    <p class="secao__sub">
+      Coloque os números da sua propriedade. A conta compara o imposto sobre o resultado
+      real da safra com o imposto calculado sobre 20% da receita bruta, que é o que a
+      Receita aceita quando a despesa não é comprovada.
+    </p>
+
+    <div class="simulador revelar">
+      <form class="simulador__campos" id="formSimulador">
+        <div class="campo">
+          <label for="hectares">Área plantada <span>(hectares)</span></label>
+          <input type="number" id="hectares" value="500" min="1" max="100000" step="10" inputmode="numeric">
+        </div>
+        <div class="campo">
+          <label for="produtividade">Produtividade <span>(sacas por hectare)</span></label>
+          <input type="number" id="produtividade" value="53" min="1" max="300" step="1" inputmode="numeric">
+        </div>
+        <div class="campo">
+          <label for="preco">Preço da saca <span>(R$)</span></label>
+          <input type="number" id="preco" value="120" min="1" max="1000" step="5" inputmode="decimal">
+        </div>
+        <div class="campo">
+          <label for="margem">Margem real da safra <span id="margemValor">15%</span></label>
+          <input type="range" id="margem" value="15" min="1" max="40" step="1">
+        </div>
+      </form>
+
+      <div class="simulador__saida" aria-live="polite">
+        <div class="resultado">
+          <span class="resultado__rotulo">Receita bruta</span>
+          <strong class="resultado__valor" id="saidaReceita">-</strong>
+        </div>
+        <div class="resultado">
+          <span class="resultado__rotulo">Resultado real da safra</span>
+          <strong class="resultado__valor" id="saidaReal">-</strong>
+          <span class="barra"><span id="barraReal"></span></span>
+        </div>
+        <div class="resultado">
+          <span class="resultado__rotulo">Base pelos 20%</span>
+          <strong class="resultado__valor" id="saidaTeto">-</strong>
+          <span class="barra barra--teto"><span id="barraTeto"></span></span>
+        </div>
+        <div class="resultado resultado--destaque">
+          <span class="resultado__rotulo" id="saidaRotulo">Imposto pago a mais por ano</span>
+          <strong class="resultado__valor" id="saidaDiferenca">-</strong>
+        </div>
+        <p class="simulador__aviso" id="simuladorAviso"></p>
+      </div>
+    </div>
+
+    <p class="nota-legal">
+      É só uma simulação, usando a alíquota de 27,5% (a faixa mais alta do imposto de renda
+      da pessoa física). O cálculo de verdade quem faz é o seu contador, que conhece a
+      situação completa da propriedade.
+    </p>
+  </div>
+</section>
+
+<section class="secao" id="calendario">
+  <div class="container">
+    <h2 class="secao__titulo">Os prazos do ano que mexem no bolso</h2>
+
+    <div class="ano revelar" aria-hidden="true">
+      <div class="ano__meses" id="meses">
+        <span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span>
+        <span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span>
+      </div>
+      <div class="ano__faixas">
+        <span data-janela="0" style="grid-column:1 / 2">Funrural</span>
+        <span data-janela="1" style="grid-column:3 / 6">IRPF e LCDPR</span>
+        <span data-janela="2" style="grid-column:8 / 10">ITR e ADA</span>
+        <span class="ano__acento" data-janela="3" style="grid-column:11 / 13">Investimento</span>
+      </div>
+    </div>
+
+    <div class="janelas revelar" id="janelas">
+      <article class="janela" data-janela="0" data-meses="1-1">
+        <p class="janela__data">Janeiro</p>
+        <h3>Funrural</h3>
+        <p>É quando se escolhe entre contribuir sobre a folha de pagamento ou sobre a receita bruta. A escolha vale para o ano todo e não muda depois.</p>
+      </article>
+      <article class="janela" data-janela="1" data-meses="3-5">
+        <p class="janela__data">Março a maio</p>
+        <h3>IRPF e LCDPR</h3>
+        <p>Hora de decidir entre declarar o resultado real ou os 20% presumidos. Quem marca os 20% perde o prejuízo acumulado dos anos anteriores, e o programa não avisa.</p>
+      </article>
+      <article class="janela" data-janela="2" data-meses="8-9">
+        <p class="janela__data">Agosto a setembro</p>
+        <h3>ITR e ADA</h3>
+        <p>Reserva Legal, APP e outras áreas de interesse ambiental saem da base do imposto territorial. A redução sobre essas áreas pode chegar a 100%.</p>
+      </article>
+      <article class="janela janela--acento" data-janela="3" data-meses="11-12">
+        <p class="janela__data">Novembro e dezembro</p>
+        <h3>Investimento</h3>
+        <p>Trator, silo e cerca deduzem 100% no ano em que são pagos. Se a compra ficar para 2 de janeiro, a dedução só entra no ano seguinte.</p>
+      </article>
+    </div>
+
+    <p class="nota-legal">
+      Base legal: Lei 8.023/1990 (arts. 4º, 5º, 14 e 16), Lei 9.393/1996 e
+      IN RFB 2.110/2022. As datas mudam um pouco de um ano para outro, então vale
+      conferir no site da Receita Federal.
+    </p>
+  </div>
+</section>
+
+<section class="secao secao--clara" id="duvidas">
+  <div class="container duvidas">
+    <div class="duvidas__lado">
+      <h2 class="secao__titulo">Perguntas que a gente mais ouve</h2>
+      <p class="secao__sub">
+        Ficou alguma de fora? Manda no <a href="#contato">WhatsApp</a> que a gente responde.
+      </p>
+    </div>
+
+    <div class="faq" id="faq">
+      <article class="faq__item revelar">
+        <button class="faq__pergunta" aria-expanded="false">
+          Isso não é a mesma coisa que o rateio que meu sistema já faz?
+          <span class="faq__sinal" aria-hidden="true"></span>
+        </button>
+        <div class="faq__resposta"><p>
+          Não. O rateio divide a nota entre as fazendas por um percentual fixo, definido uma
+          vez e aplicado em tudo, e ninguém confere depois. Aqui a ideia é saber qual fazenda
+          recebeu aquela carga específica, e quem sabe isso é quem recebeu o caminhão.
+        </p></div>
+      </article>
+
+      <article class="faq__item revelar">
+        <button class="faq__pergunta" aria-expanded="false">
+          O produtor precisa aprender a usar um sistema?
+          <span class="faq__sinal" aria-hidden="true"></span>
+        </button>
+        <div class="faq__resposta"><p>
+          Não. Ele recebe uma mensagem no WhatsApp e toca no nome da fazenda. Não tem login,
+          senha nem aplicativo. Se ele não responder, a nota fica pendente na lista do
+          escritório.
+        </p></div>
+      </article>
+
+      <article class="faq__item revelar">
+        <button class="faq__pergunta" aria-expanded="false">
+          E a internet ruim na fazenda?
+          <span class="faq__sinal" aria-hidden="true"></span>
+        </button>
+        <div class="faq__resposta"><p>
+          Ele não precisa estar conectado quando a pergunta chega. A mensagem fica esperando
+          no celular e a resposta vai quando o sinal voltar, seja na sede, na estrada ou na
+          cidade. A gente pensou nisso desde o começo, porque sinal ruim é o normal em boa
+          parte das fazendas.
+        </p></div>
+      </article>
+
+      <article class="faq__item revelar">
+        <button class="faq__pergunta" aria-expanded="false">
+          Vocês precisam do meu certificado digital?
+          <span class="faq__sinal" aria-hidden="true"></span>
+        </button>
+        <div class="faq__resposta"><p>
+          Não. O ContAgro usa os XMLs que o escritório já recebe hoje. Assim a gente não
+          guarda certificado de ninguém, o que é mais seguro e deixa o começo bem mais rápido.
+        </p></div>
+      </article>
+
+      <article class="faq__item revelar">
+        <button class="faq__pergunta" aria-expanded="false">
+          Quem assina o trabalho continua sendo o contador?
+          <span class="faq__sinal" aria-hidden="true"></span>
+        </button>
+        <div class="faq__resposta"><p>
+          Sim. O ContAgro organiza as informações e mostra o que precisa de atenção, mas a
+          análise técnica, o lançamento final e a assinatura continuam com o contador
+          responsável.
+        </p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao chamada" id="contato">
+  <div class="container">
+    <div class="chamada__caixa revelar">
+      <h2>Que tal testar com as notas do seu escritório?</h2>
+      <p class="chamada__texto">
+        Para começar você não precisa comprar nada. A ideia é pegar umas cinquenta notas de
+        insumo da última safra, mandar as perguntas para os produtores durante duas semanas
+        e ver quantos respondem e em quanto tempo. Se os números não forem bons, a gente
+        muda o que precisar, e você fica sabendo disso antes de gastar qualquer coisa.
+      </p>
+
+      <div class="chamada__acoes">
+        <a class="botao botao--acento" href="https://wa.me/5599985030310?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20ContAgro" target="_blank" rel="noopener">
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <p class="chamada__email">E-mail: <span>dev.echavez@gmail.com</span></p>
+
+      <p class="chamada__rodape">Estamos em Balsas (MA) e atendemos todo o MATOPIBA.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="container rodape__interno">
+    <div class="rodape__marca">
+      <svg class="marca__folha" viewBox="0 0 200 216" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="recorteFolhaRodape">
+            <path d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#recorteFolhaRodape)">
+          <rect x="0" y="10" width="100" height="190" fill="#92B731"/>
+          <rect x="100" y="60" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="82" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="104" width="80" height="13" fill="#E0A42B"/>
+          <rect x="100" y="126" width="80" height="13" fill="#92B731"/>
+          <rect x="100" y="148" width="80" height="13" fill="#92B731"/>
+        </g>
+        <path d="M100,18 C132,44 166,82 166,118 C166,158 136,184 100,190 C64,184 34,158 34,118 C34,82 68,44 100,18 Z" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+        <line x1="100" y1="22" x2="100" y2="206" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <p class="rodape__nome">ContAgro</p>
+        <p class="rodape__frase">Nenhuma informação se perde entre o campo e a contabilidade.</p>
+      </div>
+    </div>
+
+    <nav class="rodape__links" aria-label="Navegação do rodapé">
+      <a href="#problema">O problema</a>
+      <a href="#como">Como funciona</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#calendario">Calendário</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <p class="rodape__legal">
+      © <span id="ano">2026</span> ContAgro. Conteúdo informativo, que não substitui a
+      orientação contábil ou tributária do seu contador.
+    </p>
+  </div>
+</footer>
+
+<a class="flutuante" id="flutuante" href="https://wa.me/5599985030310?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20ContAgro" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
